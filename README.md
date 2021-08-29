@@ -1,0 +1,36 @@
+# Demo RabbitMQ
+Demo program Message Broker menggunakan RabbitMQ.
+
+## Order Service
+~~~
+POST http://localhost:3000/api/order
+Content-Type: application/json
+
+{
+  "message": "Pesan yang akan dikirim"
+}
+~~~
+![Image01](public/image01.png)
+
+### Keterangan :
+Angka pada Kolom `Ready` dan `Total` menandakan jumlah data buffer yang tersimpan dan siap dikirimkan ke `Notifikasi Service`
+
+## Notification Service
+~~~
+GET http://localhost:3000/api/notif
+Content-Type: application/json
+~~~
+~~~
+{
+  "status": "success",
+  "data": {
+    "deliveryTag": 1,
+    "consumerTag": "amq.ctag-bLGpTaaaobHZY13aiR-Hbw",
+    "message": "Lorem ipsum dolor sit amet"
+  }
+}
+~~~
+![Image02](public/Image02.png)
+
+### Keterangan :
+Kolom `Ready` dan `Total` akan berkurang jika data yang tersimpan sebelumnya telah terkirim/diterima oleh consumer.
