@@ -10,7 +10,7 @@ Content-Type: application/json
   "message": "Pesan yang akan dikirim"
 }
 ~~~
-![Image01](public/image01.png)
+![Image01](public/Image01.png)
 
 ### Keterangan :
 Angka pada Kolom `Ready` dan `Total` menandakan jumlah data buffer yang tersimpan dan siap dikirimkan ke `Notifikasi Service`
