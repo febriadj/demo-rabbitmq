@@ -1,6 +1,8 @@
 # Demo RabbitMQ
 Demo program Message Broker menggunakan RabbitMQ.
 
+Defaultnya server RabbitMQ berjalan pada port 1562. Untuk melakukan monitoring, buka RabbitMQ Management: http://localhost:15672, Untuk login masukan `guest` pada field username dan password.
+
 ## Order Service
 ~~~
 POST http://localhost:3000/api/order
